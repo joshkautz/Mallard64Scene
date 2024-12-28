@@ -427,10 +427,11 @@ int main()
     joypad_poll();
     joypad_buttons_t buttons = joypad_get_buttons_pressed(JOYPAD_PORT_1);
     if(buttons.a) frozen++;
-    if(frozen > 2) frozen = 0;
+    if(frozen > 3) frozen = 0;
 
     if(frozen == 1)  time = 45000;
-    else if(frozen == 2)  time = 5000;
+    else if(frozen == 2)  time = 80000;
+    else if(frozen == 3)  time = 5000;
     else time += deltatime;
     timedynamic += deltatime;
 

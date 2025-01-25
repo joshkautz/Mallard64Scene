@@ -1,6 +1,35 @@
-A scene dedicated to celebrating the occasion of Christmas 2024 for the whole N64Brew community!
+# Mallard 64 Scene
 
-Requires Libdragon-unstable and Tiny3d for the Nintendo 64 to build.
+This simply is a foray into learning and experimenting with N64 Homebrew using Libdragon and Tiny3D. All work is building off of SpookyIluha's [BrewChristmas](https://github.com/SpookyIluha/BrewChristmas) example. Cheers to the N64Brew community!
+
+## Build with [libdragon-docker](https://github.com/anacierdem/libdragon-docker)
+
+### Clone
+Clone this repository with `--recurse-submodules`:
+```bash
+git clone https://github.com/joshkautz/Mallard64Scene.git --recurse-submodules
+```
+If you've already cloned the repository without the `--recurse-submodules` flag, run:
+```bash
+git submodule init
+git submodule update
+```
+
+### Initialize
+Initialize Docker container:
+```bash
+libdragon init
+```
+
+## Build:
+
+```bash
+libdragon make -C tiny3d install
+libdragon make -C tiny3d/tools/gltf_importer install
+libdragon make
+```
+
+## Screenshots
 
 ![brew_christmas 2024-12-28 15-49-07](https://github.com/user-attachments/assets/c8269d4e-f95d-4704-90a3-5b32eed63a72)
 ![image](https://github.com/user-attachments/assets/2386fea4-b8cb-4163-b870-907d58285a21)

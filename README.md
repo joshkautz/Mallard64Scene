@@ -25,8 +25,9 @@ libdragon init
 Install Tiny3D on the Docker container.
 
 ```bash
-libdragon make install -C tiny3d
-libdragon make install -C tiny3d/tools/gltf_importer
+libdragon make -C tiny3d install
+libdragon make -C tiny3d/tools/gltf_importer
+libdragon make -C tiny3d/tools/gltf_importer install
 ```
 
 ## Build

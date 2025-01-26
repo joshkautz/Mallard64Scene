@@ -16,16 +16,23 @@ git submodule update
 ```
 
 ### Initialize
+
 Initialize Docker container:
 ```bash
 libdragon init
 ```
 
-## Build:
+This also installs Libdragon on the Docker container.
+
+Next, install Tiny3D on the Docker container.
 
 ```bash
-libdragon make -C tiny3d install
-libdragon make -C tiny3d/tools/gltf_importer install
+libdragon exec bash -c "cd tiny3d && ./build.sh"
+```
+
+## Build
+
+```bash
 libdragon make
 ```
 
